@@ -3,15 +3,15 @@ import shoe from "../../assets/images/shoe.jpeg";
 function StoreOverview() {
   return (
     <section className="w-full h-fit pb-8">
-      <div className="md:w-10/12 md:mx-auto mx-4  mt-10">
+      <div className="md:w-10/12 md:mx-auto mx-2  mt-10">
         <h2 className="text-center uppercase text-3xl font-bold">
           some Products listed on our platform
         </h2>
       </div>
       <div className="md:w-5/12 md:mx-auto mx-4  mt-8">
         <div className="grid grid-cols-4 gap-4 mb-4">
-          <div className="bg-gray-200 h-full w-full">
-            <img src={shoe} className="h-full" alt="" />
+          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
+            <img src={shoe} alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">
@@ -34,8 +34,8 @@ function StoreOverview() {
         </div>
 
         <div className="grid grid-cols-4 gap-4 mb-4">
-          <div className="bg-gray-200 h-full w-full">
-            <img src={shoe} className="h-full" alt="" />
+          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
+            <img src={shoe} alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">
@@ -58,8 +58,8 @@ function StoreOverview() {
         </div>
 
         <div className="grid grid-cols-4 gap-4 mb-4">
-          <div className="bg-gray-200 h-full w-full">
-            <img src={shoe} className="h-full" alt="" />
+          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
+            <img src={shoe} alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">
@@ -82,8 +82,8 @@ function StoreOverview() {
         </div>
 
         <div className="grid grid-cols-4 gap-4 mb-4">
-          <div className="bg-gray-200 h-full w-full">
-            <img src={shoe} className="h-full" alt="" />
+          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
+            <img src={shoe} alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">

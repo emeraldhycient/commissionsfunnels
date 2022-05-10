@@ -1,6 +1,7 @@
 import React from "react";
 import Benefits from "../components/home/benefits";
 import Delivery from "../components/home/delivery";
+import Faq from "../components/home/faq";
 import Herosection from "../components/home/herosection";
 import SalesForce from "../components/home/salesForce";
 import StoreOverview from "../components/home/storeOverview";
@@ -18,6 +19,7 @@ function Home() {
       <Benefits />
       <Delivery />
       <StoreOverview />
+      <Faq />
     </Layout>
   );
 }
