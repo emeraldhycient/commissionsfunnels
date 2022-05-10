@@ -39,7 +39,7 @@ function Benefits() {
           </div>
           <div className="mb-8 md:mb-4">
             <h2 className="text-lg font-bold mb-6 capitalize">
-              Do It YourSelf Sales Funnel Page hosted by us 🚀
+              Done For you Sales Funnel Page hosted by us 🚀
             </h2>
             <p className="text-gray-400 mb-10">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
@@ -59,7 +59,7 @@ function Benefits() {
             </center>
             <center className="visible md:hidden">
               <button className="bg-white border-[.01rem] border-slate-900 text-[#ffce1a] px-4 py-2 text-lg hover:bg-slate-900 hover:text-white hover:border[#ffce1a] capitalize">
-                Join as a vendor
+                Book Our Service
               </button>
             </center>
           </div>
@@ -75,7 +75,7 @@ function Benefits() {
           <div className="">
             <center>
               <button className="bg-white border-[.01rem] border-slate-900 text-[#ffce1a] px-4 py-2 text-lg hover:bg-slate-900 hover:text-white hover:border[#ffce1a] capitalize">
-                Join as a vendor
+                Book Our Service
               </button>
             </center>
           </div>
