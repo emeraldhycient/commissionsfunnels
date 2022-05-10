@@ -60,7 +60,7 @@ function Faq() {
   };
 
   return (
-    <section className="w-full h-fit pb-8 bg-gray-50 pt-4">
+    <section className="w-full h-fit pb-16 bg-gray-50 pt-4">
       <div className="md:w-10/12 md:mx-auto mx-2  mt-10">
         <h2 className="text-left uppercase text-3xl font-bold mb-8 ">
           Frequently Asked Questions
@@ -71,7 +71,7 @@ function Faq() {
               <div className="shadow bg-gray-100 border-[.03rem] border-[#ffce1a] px-4 py-3 rounded-md flex justify-between items-center">
                 <h3 className="text-lg font-semibold">{quest.question}</h3>
                 {quest.isOpen ? (
-                  <BsCaretDownSquare size={25} className="text-[#ffce1a]" />
+                  <BsCaretDownSquare size={25} className="text-blue-400" />
                 ) : (
                   <BsCaretRightSquare size={25} className="text-[#ffce1a]" />
                 )}

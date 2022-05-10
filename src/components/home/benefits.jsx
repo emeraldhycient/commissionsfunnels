@@ -30,7 +30,7 @@ function Benefits() {
               quam dolore veritatis excepturi maxime assumenda quaerat, eaque
               ut!
             </p>
-            <img src={friends} className="w-[80%] mb-6" alt="" />
+            <img src={friends} loading="lazy" className="w-[80%] mb-6" alt="" />
             <center className="visible md:hidden">
               <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
                 Join as an Affliate
@@ -55,7 +55,7 @@ function Benefits() {
               ut!
             </p>
             <center>
-              <img src={doit} className="w-[80%] mb-6" alt="" />
+              <img src={doit} loading="lazy" className="w-[80%] mb-6" alt="" />
             </center>
             <center className="visible md:hidden">
               <button className="bg-white border-[.01rem] border-slate-900 text-[#ffce1a] px-4 py-2 text-lg hover:bg-slate-900 hover:text-white hover:border[#ffce1a] capitalize">

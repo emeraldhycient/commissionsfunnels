@@ -27,7 +27,7 @@ function Delivery() {
           </div>
           <div className="mt-8">
             <center>
-              <img src={delivery} className="w-[80%]" alt="" />
+              <img src={delivery} loading="lazy" className="w-[80%]" alt="" />
             </center>
           </div>
         </div>

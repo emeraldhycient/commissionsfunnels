@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/footer";
 import Benefits from "../components/home/benefits";
 import Delivery from "../components/home/delivery";
 import Faq from "../components/home/faq";
@@ -20,6 +21,7 @@ function Home() {
       <Delivery />
       <StoreOverview />
       <Faq />
+      <Footer />
     </Layout>
   );
 }

@@ -11,7 +11,7 @@ function StoreOverview() {
       <div className="md:w-5/12 md:mx-auto mx-4  mt-8">
         <div className="grid grid-cols-4 gap-4 mb-4">
           <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} alt="" />
+            <img src={shoe} loading="lazy" alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">
@@ -35,7 +35,7 @@ function StoreOverview() {
 
         <div className="grid grid-cols-4 gap-4 mb-4">
           <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} alt="" />
+            <img src={shoe} loading="lazy" alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">
@@ -59,7 +59,7 @@ function StoreOverview() {
 
         <div className="grid grid-cols-4 gap-4 mb-4">
           <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} alt="" />
+            <img src={shoe} loading="lazy" alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">
@@ -83,7 +83,7 @@ function StoreOverview() {
 
         <div className="grid grid-cols-4 gap-4 mb-4">
           <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} alt="" />
+            <img src={shoe} loading="lazy" alt="" />
           </div>
           <div className="w-full flex flex-col justify-between items-left col-span-2">
             <h4 className="text-base font-bold">

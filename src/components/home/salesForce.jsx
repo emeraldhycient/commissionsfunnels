@@ -7,7 +7,7 @@ function SalesForce() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="md:mt-20 mt-12 mb-8">
             <center>
-              <img src={sales} className="w-[80%]" alt="" />
+              <img src={sales} loading="lazy" className="w-[80%]" alt="" />
             </center>
           </div>
           <div className=" flex flex-col justify-center items-center  text-left">

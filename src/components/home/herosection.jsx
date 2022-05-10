@@ -28,6 +28,7 @@ function Herosection() {
           <center>
             <img
               src={phone}
+              loading="lazy"
               alt="phone image showing our commission base design "
               className="w-[80%]"
             />
