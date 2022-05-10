@@ -1,4 +1,5 @@
 import React from "react";
+import Benefits from "../components/home/benefits";
 import Herosection from "../components/home/herosection";
 import SalesForce from "../components/home/salesForce";
 import WhatWeDo from "../components/home/whatWeDo";
@@ -12,6 +13,7 @@ function Home() {
       <Herosection />
       <WhatWeDo />
       <SalesForce />
+      <Benefits />
     </Layout>
   );
 }

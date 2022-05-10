@@ -4,9 +4,12 @@ function WhatWeDo() {
   return (
     <section className="w-full bg-gray-100 h-fit md:h-screen pt-4 pb-8">
       <div className="mx-4 md:w-10/12 md:mx-auto mt-8">
-        <h1 className="text-2xl font-bold mb-6 uppercase text-center">
-          What we Do
-        </h1>
+        <div className="flex flex-col justify-center items-center mb-6">
+          <h1 className="text-2xl font-bold  uppercase text-center">
+            What we Do
+          </h1>
+          <div className="bg-yellow-500 h-1 w-32"></div>
+        </div>
         <p className="text-left mb-6">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
           minima vero excepturi tempora facilis quam, accusantium quae

@@ -29,7 +29,7 @@ function Herosection() {
             <img
               src={phone}
               alt="phone image showing our commission base design "
-              className="w-[90%] md:w-full h-[50vh] md:h-[70vh]"
+              className="w-[80%]"
             />
           </center>
         </div>
