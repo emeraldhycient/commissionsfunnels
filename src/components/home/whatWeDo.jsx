@@ -23,7 +23,7 @@ function WhatWeDo() {
         <h1 className="text-xl font-bold mb-8 uppercase text-center">
           Rapdily Growing
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 shadow py-6 rounded-sm">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 shadow py-6 rounded-sm">
           <div className=" text-center flex flex-col justify-center items-center ">
             <div className="bg-slate-900 p-3  mb-5 flex justify-center items-center h-20 w-20 rounded-full border-[.04rem] border-[#ffce1a]">
               <h3 className="text-lg text-[#ffce1a] font-extrabold">10M + </h3>
@@ -42,12 +42,6 @@ function WhatWeDo() {
               <h3 className="text-lg text-[#ffce1a] font-extrabold">10k + </h3>
             </div>
             <h3 className="text-lg font-bold">Community members</h3>
-          </div>
-          <div className=" text-center flex flex-col justify-center items-center ">
-            <div className="bg-slate-900 p-3  mb-5 flex justify-center items-center h-20 w-20 rounded-full border-[.04rem] border-[#ffce1a]">
-              <h3 className="text-lg text-gray-100 font-extrabold"> 7m +</h3>
-            </div>
-            <h3 className="text-lg font-bold">Revenue</h3>
           </div>
         </div>
 

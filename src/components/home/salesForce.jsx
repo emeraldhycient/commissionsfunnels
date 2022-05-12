@@ -21,7 +21,7 @@ function SalesForce() {
               sapiente omnis earum praesentium doloribus ab ex. Reprehenderit ad
             </p>
             <div className="flex justify-between mt-8 items-center w-full pr-4">
-              <button className="bg-white border-[.01rem] border-slate-900 text-[#ffce1a] px-3 py-1 text-lg hover:bg-slate-900 hover:text-white hover:border[#ffce1a]">
+              <button className="invisible bg-white border-[.01rem] border-slate-900 text-[#ffce1a] px-3 py-1 text-lg hover:bg-slate-900 hover:text-white hover:border[#ffce1a]">
                 Learn more
               </button>
               <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
