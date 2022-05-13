@@ -1,11 +1,13 @@
 import funnel from "../assets/images/sales-funnel.png";
 import { Link } from "react-router-dom";
+import { BsFacebook, BsTwitter } from "react-icons/bs";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
     <section className="w-full bg-slate-900 h-fit pt-4  mt-6">
       <div className="mx-4 md:w-10/12 md:mx-auto mt-8 mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-5">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           <div className="mb-6">
             <div className="flex items-center flex-shrink-0  mr-6">
               <h2 className="text-xl text-slate-900 font-horta font-bold flex text-white items-center">
@@ -19,9 +21,26 @@ function Footer() {
               lorem ipsum dolor sit amet consectetur adipisicing elit. lorem
               ipsum dolor sit amet consectetur adipisicing elit.
             </p>
+            <ul className="flex items-center mt-6 mb-8 md:mb-1">
+              <li className="mr-3">
+                <a href="http://">
+                  <BsFacebook size={25} className="text-white" />
+                </a>
+              </li>
+              <li className="mr-3">
+                <a href="http://">
+                  <FaWhatsapp size={25} className="text-white" />
+                </a>
+              </li>
+              <li className="mr-3">
+                <a href="http://">
+                  <BsTwitter size={25} className="text-white" />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="col-span-4 grid grid-cols-2 md:grid-cols-4">
-            <div className="mb-4 text-white text-center">
+          <div className="col-span-2 grid grid-cols-2 md:grid-cols-2">
+            <div className="mb-4 text-white text-left md:text-center">
               <h4 className="text-lg font-semibold">Useful links</h4>
               <ul className="mt-4 md:mt-8">
                 <li className="mt-2">
@@ -40,40 +59,6 @@ function Footer() {
             </div>
             <div className="mb-4 text-white text-center">
               <h4 className="text-lg font-semibold">Information</h4>
-              <ul className="mt-4 md:mt-8">
-                <li className="mt-2">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="mt-2">
-                  <Link to="/about">About</Link>
-                </li>
-                <li className="mt-2">
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li className="mt-2">
-                  <Link to="/login">Login</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="mb-4 text-white text-center">
-              <h4 className="text-lg font-semibold">Support</h4>
-              <ul className="mt-4 md:mt-8">
-                <li className="mt-2">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="mt-2">
-                  <Link to="/about">About</Link>
-                </li>
-                <li className="mt-2">
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li className="mt-2">
-                  <Link to="/login">Login</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="mb-4 text-white text-center">
-              <h4 className="text-lg font-semibold">Social Media</h4>
               <ul className="mt-4 md:mt-8">
                 <li className="mt-2">
                   <Link to="/">Home</Link>

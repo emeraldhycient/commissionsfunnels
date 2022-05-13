@@ -13,7 +13,9 @@ function Hero() {
         }}
         className="h-64 w-screen flex justify-center items-center"
       >
-        <h1 className="text-4xl font-extrabold text-gray-100">About us</h1>
+        <h1 className="text-4xl font-extrabold text-gray-100 backdrop-invert">
+          About us
+        </h1>
       </div>
       <div
         style={{
