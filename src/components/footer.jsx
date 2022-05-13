@@ -79,9 +79,7 @@ function Footer() {
       </div>
       <div className="h-12 bg-slate-500">
         <div className="flex items-center justify-center text-white text-center font-medium pt-3">
-          <p className="text-sm">
-            © 2022 Commissionsfunnels. All rights reserved.
-          </p>
+          <p className="text-sm">© 2022 Commissionsfunnels.</p>
         </div>
       </div>
     </section>
