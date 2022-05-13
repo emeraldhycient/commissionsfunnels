@@ -6,7 +6,7 @@ function Navbar() {
     <header className="bg-gray-100 h-[3rem] w-full">
       <nav className="w-full md:w-10/12 md:mx-auto flex items-center justify-between flex-wrap bg-gray-100 p-4">
         <div className="flex items-center flex-shrink-0  mr-6">
-          <h2 className="text-xl text-slate-900 font-horta font-bold flex items-center">
+          <h2 className="text-2xl text-slate-900 font-horta font-bold flex items-center">
             <span className="bg-[#ffce1a] text-white px-1">Commissions</span>
             Funnels <img loading="lazy" src={funnel} className="h-6 w-6" />
           </h2>
