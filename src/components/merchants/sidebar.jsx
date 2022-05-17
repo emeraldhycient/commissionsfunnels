@@ -5,7 +5,7 @@ function Sidebar() {
     <div className="h-full flex flex-col justify-between">
       <ul className="mx-auto">
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
-          <Link to="/" className="flex items-center ">
+          <Link to="/merchant/dashboard" className="flex items-center ">
             <svg
               className="h-5 w-5 mr-3"
               fill="none"
@@ -21,7 +21,7 @@ function Sidebar() {
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
-          <Link to="/" className="flex items-center ">
+          <Link to="/merchant/vendor" className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 mr-3"
@@ -34,7 +34,7 @@ function Sidebar() {
                 clipRule="evenodd"
               />
             </svg>
-            <h6>Products</h6>
+            <h6>Vendor</h6>
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
@@ -51,7 +51,7 @@ function Sidebar() {
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
-          <Link to="/" className="flex items-center ">
+          <Link to="/merchant/Marketplace" className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 mr-3"
@@ -100,7 +100,7 @@ function Sidebar() {
       </ul>
       <div className="bg-yellow-500 h-24 flex flex-col pb-1 justify-between items-center">
         <Link to="/" className="flex justify-between items-center pt-2  ">
-          <div className="h-10 w-10 p-2  rounded-full bg-gray-400">
+          <div className="h-10 w-10 p-2  rounded-full bg-slate-900">
             {/* replace man with person usernmae*/}
             <img
               src="https://avatars.dicebear.com/api/human/man.svg"

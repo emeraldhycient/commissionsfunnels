@@ -1,11 +1,14 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="h-[3rem] bg-gray-50 border-b-[.1rem] border-gray-200 flex items-center px-6">
+    <div className="h-[3rem] bg-gray-50 border-b-[.1rem] border-gray-200 flex items-center px-2 md:px-6">
       <div className="flex-1 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="text-gray-500 hover:text-gray-700">
+          <Link
+            to="/merchant/dashboard"
+            className="text-gray-500 hover:text-gray-700"
+          >
             <svg
               className="h-6 w-6"
               fill="none"
@@ -17,8 +20,11 @@ function Navbar() {
             >
               <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
-          </a>
-          <a href="#" className="ml-4 text-gray-500 hover:text-gray-700">
+          </Link>
+          <Link
+            to="/merchant/dispatchers"
+            className="ml-4 text-gray-500 hover:text-gray-700"
+          >
             <svg
               className="h-6 w-6"
               fill="none"
@@ -30,7 +36,25 @@ function Navbar() {
             >
               <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-          </a>
+          </Link>
+          <Link to="" className="ml-4">
+            <button className="w-[99%] bg-slate-900 text-white px-2 py-1 mx-auto flex items-center justify-center items-center hover:bg-white border-[.1rem] hover:border-slate-900 hover:text-yellow-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 hover:text-yellow-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </button>
+          </Link>
         </div>
         <div className="flex items-center">
           <div className="h-10 w-10 p-2 rounded-full bg-slate-900">
@@ -42,18 +66,6 @@ function Navbar() {
             />
           </div>
           <h2 className="mx-2 text-sm">Igweze Hycient</h2>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-              clipRule="evenodd"
-            />
-          </svg>
         </div>
       </div>
     </div>
