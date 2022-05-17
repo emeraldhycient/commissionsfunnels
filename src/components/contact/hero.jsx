@@ -14,7 +14,7 @@ function Hero() {
         className="h-64 w-screen flex justify-center items-center"
       >
         <h1 className="text-4xl font-extrabold text-gray-100 backdrop-invert">
-          About us
+          Reach Out
         </h1>
       </div>
       <div

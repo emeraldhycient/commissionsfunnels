@@ -23,7 +23,7 @@ function About() {
               backgroundRepeat: "no-repeat",
             }}
           ></div>
-          <div className="bg-gray-50 h-fit p-8 md:w-11/12 mx-4 md:mx-auto -mt-20 shadow 	">
+          <div className="bg-gray-50 h-fit p-8 md:w-11/12 mx-4 md:mx-auto -mt-52 shadow 	">
             <p className="bg-gray-50">
               <span>
                 Facilis, repellat commodi quidem, vel ex est dicta deleniti
