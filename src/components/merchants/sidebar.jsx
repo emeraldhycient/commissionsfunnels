@@ -38,7 +38,7 @@ function Sidebar() {
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
-          <Link to="/" className="flex items-center ">
+          <Link to="/merchant/sales" className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 mr-3"
@@ -68,7 +68,7 @@ function Sidebar() {
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
-          <Link to="/" className="flex items-center ">
+          <Link to="/merchant/transactions" className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 mr-3"
@@ -82,7 +82,7 @@ function Sidebar() {
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
-          <Link to="/" className="flex items-center ">
+          <Link to="/merchant/dispatcherszone" className="flex items-center ">
             <svg
               className="h-5 w-5 mr-3"
               fill="none"
