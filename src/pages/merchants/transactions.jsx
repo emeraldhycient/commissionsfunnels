@@ -19,7 +19,7 @@ function Transactions() {
           <h6>Transactions</h6>
         </Link>
       </h5>
-      <div className=" mt-4 shadow py-5 overflow-x-auto">
+      <div className=" mt-4 shadow py-5 overflow-x-auto mb-4">
         <table className="table-auto text-center border border-gray-200 mx-auto">
           <thead>
             <tr className="text-sm text-gray-400">
