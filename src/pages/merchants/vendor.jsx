@@ -6,6 +6,7 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 import { BiTransfer } from "react-icons/bi";
 import { FcMoneyTransfer } from "react-icons/fc";
 import { RiStore3Line } from "react-icons/ri";
+import NonVendors from "../../components/merchants/vendor/nonVendors";
 
 function Vendor() {
   return (
@@ -26,7 +27,8 @@ function Vendor() {
           </svg>
           <h6>Vendor</h6>
         </Link>
-      </h5>{" "}
+      </h5>
+      {/*
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
         <Stat
           name="products"
@@ -64,7 +66,8 @@ function Vendor() {
         <Product />
         <Product />
         <Product />
-      </div>
+        </div>*/}
+      <NonVendors />
     </Layout>
   );
 }
