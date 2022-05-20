@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="h-full flex flex-col justify-between">
-      <ul className="mx-auto">
+      <ul className="mx-5 md:mx-auto flex md:block justify-between items-center">
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
           <Link to="/merchant/dashboard" className="flex items-center ">
             <svg
@@ -17,7 +17,7 @@ function Sidebar() {
             >
               <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
-            <h6>Dashboard</h6>
+            <h6 className="hidden md:block">Dashboard</h6>
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
@@ -34,7 +34,7 @@ function Sidebar() {
                 clipRule="evenodd"
               />
             </svg>
-            <h6>Vendor</h6>
+            <h6 className="hidden md:block">Vendor</h6>
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
@@ -47,7 +47,7 @@ function Sidebar() {
             >
               <path d="M8 5a1 1 0 100 2h5.586l-1.293 1.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L13.586 5H8zM12 15a1 1 0 100-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L6.414 15H12z" />
             </svg>
-            <h6>Sales</h6>
+            <h6 className="hidden md:block">Sales</h6>
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
@@ -64,7 +64,7 @@ function Sidebar() {
                 clipRule="evenodd"
               />
             </svg>
-            <h6>Marketplace</h6>
+            <h6 className="hidden md:block">Marketplace</h6>
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
@@ -78,7 +78,7 @@ function Sidebar() {
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
             </svg>
-            <h6>Transactions</h6>
+            <h6 className="hidden md:block">Transactions</h6>
           </Link>
         </li>
         <li className="text-gray-300 text-sm my-4 hover:text-yellow-500">
@@ -94,11 +94,25 @@ function Sidebar() {
             >
               <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <h6>Dispatchers</h6>
+            <h6 className="hidden md:block">Dispatchers</h6>
           </Link>
         </li>
+        <li className="block md:hidden text-gray-300 text-sm my-4 hover:text-yellow-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 ml-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </li>
       </ul>
-      <div className="bg-yellow-500 h-24 flex flex-col pb-1 justify-between items-center">
+      <div className="hidden md:block bg-yellow-500 h-24 flex flex-col pb-1 justify-between items-center">
         <Link to="/" className="flex justify-between items-center pt-2  ">
           <div className="h-10 w-10 p-2  rounded-full bg-slate-900">
             {/* replace man with person usernmae*/}

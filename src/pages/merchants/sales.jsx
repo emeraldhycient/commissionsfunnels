@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "../../components/merchants/layout";
+import List from "../../components/merchants/sales/list";
 
 function Sales() {
   return (
@@ -17,8 +18,39 @@ function Sales() {
           <h6>Sales</h6>
         </Link>
       </h5>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4"></div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4"></div>
+      <div className=" mt-4 shadow py-5 overflow-x-auto">
+        <table className="table-auto text-center border border-gray-200 mx-auto">
+          <thead>
+            <tr className="text-sm text-gray-400">
+              <th className="w-fit p-4 text-center border-r border-gray-200">
+                Transaction ID
+              </th>
+              <th className="w-fit p-4 text-center  border-r border-gray-200">
+                Product name
+              </th>
+              <th className="w-fit p-4 text-center  border-r border-gray-200">
+                Price{" "}
+              </th>
+              <th className="w-fit p-4 text-center  border-r border-gray-200">
+                Commission
+              </th>
+              <th className="w-fit p-4 text-center  border-r border-gray-200">
+                Payment Status
+              </th>
+              <th className="w-fit p-4 text-center  border-r border-gray-200">
+                Sold on
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <List />
+            <List />
+            <List />
+            <List />
+            <List />
+          </tbody>
+        </table>
+      </div>
     </Layout>
   );
 }

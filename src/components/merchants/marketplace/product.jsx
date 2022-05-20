@@ -3,7 +3,7 @@ import shoe from "../../../assets/images/shoe.jpeg";
 
 function Product() {
   return (
-    <div className=" mb-4 border-b-[.1rem] border-[#ffce1a] shadow-lg pt-2">
+    <div className="w-full mb-4 border-b-[.1rem] border-[#ffce1a] shadow-lg pt-2">
       <div className="bg-gray-50 h-40 w-full flex justify-center items-center">
         <img src={shoe} loading="lazy" className="h-40 w-full" alt="" />
       </div>
