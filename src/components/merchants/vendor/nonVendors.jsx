@@ -11,7 +11,7 @@ function NonVendors() {
       </h1>
       <p>
         follow this link to register as a vendor{" "}
-        <Link to="" className="text-yellow-500 border-b border-blue-400">
+        <Link to="/" className="text-yellow-500 border-b border-blue-400">
           REGISTER
         </Link>
       </p>

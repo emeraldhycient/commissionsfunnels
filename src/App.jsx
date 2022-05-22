@@ -6,6 +6,8 @@ import Login from "./pages/login";
 import Dashboard from "./pages/merchants/dashboard";
 import DispatchersZone from "./pages/merchants/dispatchersZone";
 import Marketplace from "./pages/merchants/marketplace";
+import OnBoardDispatcher from "./pages/merchants/onBoardDispatcher";
+import OnBoardVendor from "./pages/merchants/onBoardVendor";
 import Sales from "./pages/merchants/sales";
 import Transactions from "./pages/merchants/transactions";
 import Vendor from "./pages/merchants/vendor";
@@ -25,6 +27,8 @@ function App() {
         <Route path="/merchant/sales" element={<Sales />} />
         <Route path="/merchant/transactions" element={<Transactions />} />
         <Route path="/merchant/dispatcherszone" element={<DispatchersZone />} />
+        <Route path="/onboarding/dispatcher" element={<OnBoardDispatcher />} />
+        <Route path="/onboarding/vendor" element={<OnBoardVendor />} />
       </Routes>
     </BrowserRouter>
   );

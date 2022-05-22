@@ -68,7 +68,7 @@ function DispatchersZone() {
             <h6>Dispatcherszone</h6>
           </Link>
         </h5>
-        <Link to="" className="ml-4">
+        <Link to="/onboarding/dispatcher" className="ml-4">
           <button className="w-fit flex bg-slate-900 text-white px-2 py-1 mx-auto flex items-center justify-center items-center hover:bg-white border-[.1rem] hover:border-slate-900 hover:text-yellow-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
