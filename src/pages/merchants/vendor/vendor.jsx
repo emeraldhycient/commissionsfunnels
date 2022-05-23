@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import Layout from "../../components/merchants/layout";
-import Product from "../../components/merchants/vendor/product";
-import Stat from "../../components/merchants/vendor/stat";
+import Layout from "../../../components/merchants/layout";
+import Product from "../../../components/merchants/vendor/product";
+import Stat from "../../../components/merchants/vendor/stat";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { BiTransfer } from "react-icons/bi";
 import { FcMoneyTransfer } from "react-icons/fc";
 import { RiStore3Line } from "react-icons/ri";
-import NonVendors from "../../components/merchants/vendor/nonVendors";
+import NonVendors from "../../../components/merchants/vendor/nonVendors";
 
 function Vendor() {
   return (

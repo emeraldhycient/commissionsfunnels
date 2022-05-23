@@ -1,6 +1,9 @@
-import React from "react";
+import { useState } from "react";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
 
-function Capturedetails() {
+function Uploadform() {
+  const [isTurnNextPage, setisTurnNextPage] = useState(false);
+
   return (
     <div className="shadow p-3">
       <form>
@@ -9,100 +12,109 @@ function Capturedetails() {
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="grid-first-name"
           >
-            Company Name
+            Product Name
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             type="text"
             placeholder="e.g commissionsfunnels logistics "
             required
-            important
           />
         </div>
         <div className="w-full px-3 mb-6">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Office Address
+            Product Description
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             type="text"
-            placeholder="e.g 4 commissionsfunnels way , anambra state"
+            placeholder="e.g a product designed to solve complex mathematical problems"
             required
-            important
           />
         </div>
+
         <div className="w-full px-3 mb-6">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Company Phone
-          </label>
-          <input
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            type="text"
-            placeholder="e.g 08033456789"
-            required
-            important
-          />
-        </div>
-        <div className="w-full px-3 mb-6">
-          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Company Email
-          </label>
-          <input
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            type="email"
-            placeholder="e.g support@commissionsfunnels.com"
-            required
-            important
-          />
-        </div>
-        <div className="w-full px-3 mb-6">
-          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Company Images
+            Product Image
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             type="file"
             placeholder="e.g support@commissionsfunnels.com"
             required
-            important
           />
         </div>
         <div className="w-full px-3 mb-6">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Name of Representative
+            Product Price
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            type="text"
-            placeholder="e.g John Doe"
+            type="number"
+            placeholder="e.g #400,000"
             required
-            important
           />
         </div>
         <div className="w-full px-3 mb-6">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Representative Phone
+            Product Category
+          </label>
+          <select
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            required
+          >
+            <option>Select Product Category</option>
+            <option>Beauty</option>
+            <option>Fashion</option>
+          </select>
+        </div>
+        <div className="w-full px-3 mb-6">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+            Product Quantity
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            type="text"
-            placeholder="e.g 08033456789"
+            type="number"
+            placeholder="e.g 500"
             required
-            important
           />
         </div>
         <div className="w-full px-3 mb-6">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Representative Image
+            Commission
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            type="file"
-            placeholder="e.g support@commissionsfunnels.com"
+            type="number"
+            placeholder="e.g 30%"
             required
-            important
           />
         </div>
+
+        <div className="w-full px-3 mb-6">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 flex justify-between items-center">
+            <a
+              href="https://blog.hubspot.com/sales/sales-copy#:~:text=What%20is%20sales%20copy%3F,business%20achieve%20its%20sales%20goals."
+              className="flex items-center"
+            >
+              Design Your Sales copy
+              <AiOutlineQuestionCircle size={20} className="text-[#ffce1a]" />
+            </a>
+            <a
+              href="https://blog.hubspot.com/marketing/copywriting-examples"
+              className="text-blue-300 border-b border-[#ffce1a] text-right"
+            >
+              sales copy examples
+            </a>
+          </label>
+          <textarea
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            type="number"
+            placeholder="e.g 30%"
+            required
+          />
+        </div>
+
         <div className="w-full px-3 mb-6">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
             Delivery Locations
@@ -110,7 +122,6 @@ function Capturedetails() {
           <select
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             required
-            important
           >
             <option>Select Delivery Location</option>
             <option>Nationwide</option>
@@ -128,4 +139,4 @@ function Capturedetails() {
   );
 }
 
-export default Capturedetails;
+export default Uploadform;
