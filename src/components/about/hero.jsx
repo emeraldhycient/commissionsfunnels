@@ -1,7 +1,7 @@
 import React from "react";
 import wave from "../../assets/images/wave1.svg";
 
-function Hero() {
+function Hero({ title }) {
   return (
     <div className="">
       <div
@@ -13,8 +13,8 @@ function Hero() {
         }}
         className="h-64 w-screen flex justify-center items-center"
       >
-        <h1 className="text-4xl font-extrabold text-gray-100 backdrop-invert">
-          About us
+        <h1 className="text-4xl font-extrabold text-gray-100 backdrop-invert text-center">
+          {title}
         </h1>
       </div>
       <div

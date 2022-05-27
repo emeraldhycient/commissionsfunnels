@@ -1,4 +1,5 @@
 import sales from "../../assets/images/sales.png";
+import { Link } from "react-router-dom";
 
 function SalesForce() {
   return (
@@ -25,7 +26,9 @@ function SalesForce() {
                 Learn more
               </button>
               <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
-                Join as a vendor
+                <Link to="/onboard/" className="text-white">
+                  Join as a vendor
+                </Link>
               </button>
             </div>
           </div>{" "}

@@ -1,5 +1,6 @@
 import React from "react";
 import phone from "../../assets/images/phone.png";
+import { Link } from "react-router-dom";
 
 function Herosection() {
   return (
@@ -20,7 +21,9 @@ function Herosection() {
               Learn more
             </button>
             <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-3 py-1 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
-              Become a member
+              <Link to="/onboard/" className="text-white">
+                Become a member
+              </Link>
             </button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import friends from "../../assets/images/friends.png";
 import doit from "../../assets/images/doit.png";
+import { Link } from "react-router-dom";
 
 function Benefits() {
   return (
@@ -34,7 +35,9 @@ function Benefits() {
                 </p>
                 <center className="">
                   <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
-                    Join as an Affliate
+                    <Link to="/onboard/" className="text-white">
+                      Join as an Affliate
+                    </Link>
                   </button>
                 </center>
               </div>

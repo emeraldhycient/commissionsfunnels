@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function WhatWeDo() {
   return (
@@ -47,7 +48,9 @@ function WhatWeDo() {
 
         <center className="mt-16">
           <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-[#ffce1a] hover:text-white hover:border[#ffce1a]">
-            Get Started
+            <Link to="/onboard/" className="text-white">
+              Get Started
+            </Link>
           </button>
         </center>
       </div>

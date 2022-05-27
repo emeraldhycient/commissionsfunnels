@@ -8,7 +8,7 @@ function About() {
   return (
     <Layout>
       <Navbar />
-      <Hero />
+      <Hero title="About us" />
       <section className="bg-[#f4f5f9] h-fit pt-16 md:pt-44 pb-20">
         <div className="md:w-10/12 mx-4 md:mx-auto ">
           <h3 className="text-4xl mb-8 text-center subpixel-antialiased font-semibold">

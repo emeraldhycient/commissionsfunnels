@@ -13,6 +13,8 @@ import Transactions from "./pages/merchants/transactions";
 import Vendor from "./pages/merchants/vendor/vendor";
 import Signup from "./pages/signup";
 import Upload from "./pages/merchants/vendor/upload";
+import Onboard from "./pages/onboard";
+import Paidmember from "./components/signup/paidmember";
 function App() {
   return (
     <BrowserRouter>
@@ -20,8 +22,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<Signup />} />
+        <Route path="/sign-up/payment/:method" element={<Paidmember />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/onboard/" element={<Onboard />} />
         <Route path="/merchant/dashboard" element={<Dashboard />} />
         <Route path="/merchant/marketplace" element={<Marketplace />} />
         <Route path="/merchant/vendor" element={<Vendor />} />

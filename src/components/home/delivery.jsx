@@ -1,4 +1,5 @@
 import delivery from "../../assets/images/delivery.gif";
+import { Link } from "react-router-dom";
 
 function Delivery() {
   return (
@@ -21,7 +22,9 @@ function Delivery() {
                 Learn more
               </button>
               <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-[#ffce1a] hover:border[#ffce1a]">
-                Become a Dispatcher
+                <Link to="/onboard/" className="text-white">
+                  Become a Dispatcher
+                </Link>
               </button>
             </div>
           </div>

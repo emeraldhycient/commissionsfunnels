@@ -1,0 +1,47 @@
+import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+
+function Bank() {
+  const config = {
+    public_key: "FLWPUBK-**************************-X",
+    tx_ref: Date.now(),
+    amount: 100,
+    currency: "NGN",
+    payment_options: "card,mobilemoney,ussd",
+    customer: {
+      email: "user@gmail.com",
+      phonenumber: "07064586146",
+      name: "joel ugwumadu",
+    },
+    customizations: {
+      title: "my Payment Title",
+      description: "Payment for items in cart",
+      logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+    },
+  };
+
+  const handleFlutterPayment = useFlutterwave(config);
+
+  return (
+    <div>
+      <p className="text-yellow-500 text-sm my-4 text-center">
+        Amount to Pay #20,000
+      </p>
+      <button
+        className="bg-slate-900 text-yellow-500 p-3"
+        onClick={() => {
+          handleFlutterPayment({
+            callback: (response) => {
+              console.log(response);
+              closePaymentModal(); // this will close the modal programmatically
+            },
+            onClose: () => {},
+          });
+        }}
+      >
+        Pay #20,000
+      </button>
+    </div>
+  );
+}
+
+export default Bank;
