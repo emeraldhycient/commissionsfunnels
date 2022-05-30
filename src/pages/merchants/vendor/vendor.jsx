@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../../components/merchants/layout";
 import Product from "../../../components/merchants/vendor/product";
@@ -7,8 +8,30 @@ import { BiTransfer } from "react-icons/bi";
 import { FcMoneyTransfer } from "react-icons/fc";
 import { RiStore3Line } from "react-icons/ri";
 import NonVendors from "../../../components/merchants/vendor/nonVendors";
+import axios from "axios";
 
 function Vendor() {
+  const api_url = import.meta.env.VITE_API_URL;
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${api_url}/products/seller/${user.id}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      })
+      .then((res) => {
+        //console.log(res.data);
+        setProducts(res.data.products);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Layout>
       <div className="flex justify-between items-center mb-4">
@@ -50,46 +73,52 @@ function Vendor() {
         </Link>
       </div>
 
-      {/*
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
-        <Stat
-          name="products"
-          total={34246}
-          icon={<RiStore3Line size={25} className="text-[#ffce1a] mr-2" />}
-        />
-        <Stat
-          name="sold"
-          total={34575}
-          icon={<BiTransfer size={25} className="text-[#ffce1a] mr-2" />}
-        />
-        <Stat
-          name="Earnings"
-          total={367854}
-          icon={<FcMoneyTransfer size={25} className="text-[#ffce1a] mr-2" />}
-        />
-        <Stat
-          name="products"
-          total={397864}
-          icon={
-            <BsFillCartCheckFill size={25} className="text-[#ffce1a] mr-2" />
-          }
-        />
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        </div>*/}
-      <NonVendors />
+      {user.is_vendor ? (
+        <>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
+            <Stat
+              name="products"
+              total={34246}
+              icon={<RiStore3Line size={25} className="text-[#ffce1a] mr-2" />}
+            />
+            <Stat
+              name="sold"
+              total={34575}
+              icon={<BiTransfer size={25} className="text-[#ffce1a] mr-2" />}
+            />
+            <Stat
+              name="Earnings"
+              total={367854}
+              icon={
+                <FcMoneyTransfer size={25} className="text-[#ffce1a] mr-2" />
+              }
+            />
+            <Stat
+              name="products"
+              total={397864}
+              icon={
+                <BsFillCartCheckFill
+                  size={25}
+                  className="text-[#ffce1a] mr-2"
+                />
+              }
+            />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
+            {products.length > 0 ? (
+              products.map((product) => (
+                <Product key={product.id} data={product} />
+              ))
+            ) : (
+              <div>
+                <h1>you dont have any products now dear</h1>
+              </div>
+            )}
+          </div>
+        </>
+      ) : (
+        <NonVendors />
+      )}
     </Layout>
   );
 }

@@ -15,6 +15,7 @@ import Signup from "./pages/signup";
 import Upload from "./pages/merchants/vendor/upload";
 import Onboard from "./pages/onboard";
 import Paidmember from "./components/signup/paidmember";
+import Salescopy from "./pages/salescopy/salescopy";
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/merchant/dispatcherszone" element={<DispatchersZone />} />
         <Route path="/onboarding/dispatcher" element={<OnBoardDispatcher />} />
         <Route path="/onboarding/vendor" element={<OnBoardVendor />} />
+        <Route path="/product/:id/:name" element={<Salescopy />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,62 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Sidebar() {
+  let navigate = useNavigate();
+
+  const api_url = import.meta.env.VITE_API_URL;
+
+  const notifySuccess = (msg) =>
+    toast.success(`🦄  ${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  const notifyWarn = (msg) =>
+    toast.warn(` ${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  const logout = () => {
+    axios
+      .get(`${api_url}/logout`, {
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        if (res.data.status === "success") {
+          sessionStorage.removeItem("token");
+          sessionStorage.removeItem("user");
+          notifySuccess(res.data.message);
+          setTimeout(() => {
+            navigate("/", { replace: true });
+          }, 3000);
+        } else {
+          notifyWarn(res.data.message);
+        }
+      })
+      .catch((err) => {
+        notifyWarn(err.response.data.message);
+        console.log(err);
+      });
+  };
+
   return (
     <div className="h-full flex flex-col justify-between">
       <ul className="mx-5 md:mx-auto flex md:block justify-between items-center">
@@ -97,7 +153,10 @@ function Sidebar() {
             <h6 className="hidden md:block">Dispatchers</h6>
           </Link>
         </li>
-        <li className="block md:hidden text-gray-300 text-sm my-4 hover:text-yellow-500">
+        <li
+          className="block md:hidden text-gray-300 text-sm my-4 hover:text-yellow-500"
+          onClick={(e) => logout()}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 ml-2"
@@ -112,6 +171,17 @@ function Sidebar() {
           </svg>
         </li>
       </ul>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="hidden md:block bg-yellow-500 h-24 flex flex-col pb-1 justify-between items-center">
         <Link to="/" className="flex justify-between items-center pt-2  ">
           <div className="h-10 w-10 p-2  rounded-full bg-slate-900">
@@ -124,7 +194,10 @@ function Sidebar() {
           </div>
           <h2 className="mx-2 text-sm">Igweze Hycient</h2>
         </Link>
-        <button className="w-[99%] bg-slate-900 text-white p-2 mx-auto flex items-center justify-center items-center">
+        <button
+          onClick={(e) => logout()}
+          className="w-[99%] bg-slate-900 text-white p-2 mx-auto flex items-center justify-center items-center"
+        >
           logout
           <svg
             xmlns="http://www.w3.org/2000/svg"

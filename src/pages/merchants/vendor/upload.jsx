@@ -1,7 +1,16 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Layout from "../../../components/merchants/layout";
 import Uploadform from "../../../components/merchants/vendor/uploadform";
 
 function Upload() {
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user.is_vendor) navigate("/merchant/vendor", { replace: true });
+  }, [user.is_vendor]);
+
   return (
     <Layout>
       <div className="w-full md:w-8/12 mx-auto mt-4  p-3">

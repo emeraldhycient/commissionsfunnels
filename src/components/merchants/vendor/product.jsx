@@ -1,33 +1,53 @@
 import { BsFillCartCheckFill } from "react-icons/bs";
 import shoe from "../../../assets/images/shoe.jpeg";
 
-function Product() {
+function Product({ data }) {
+  const copyLink = () => {
+    //copy to clipboard
+    const link = `https://commissionsfunnels.com/product/${data.id}/${data.product_name}`;
+    if (navigator.clipboard.writeText(link)) {
+      alert(`Link Copied to Clipboard
+       ${link}`);
+      return;
+    }
+    //fallback support for older browsers
+    const linkfield = document.getElementById("link");
+    linkfield.select();
+    document.execCommand("copy");
+    alert(`
+      Link Copied to Clipboard@
+      ${link}
+    `);
+  };
+
   return (
     <div className=" mb-4 border-b-[.1rem] border-[#ffce1a] shadow-lg pt-2">
       <div className="bg-gray-50 h-40 w-full flex justify-center items-center">
         <img src={shoe} loading="lazy" className="h-40 w-full" alt="" />
       </div>
       <div className="w-full flex flex-col justify-between items-left px-2 ">
-        <h4 className="text-base font-bold">
-          italian soled black rubber hand crafted shoe
-        </h4>
-        <p className="text-sm text-gray-400">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. .
-        </p>
-        <a href="" className="my-1 md:my-4 text-sm">
+        <h4 className="text-base font-bold">{data.product_name}</h4>
+        <p className="text-sm text-gray-400">{data.product_description}</p>
+        <a
+          href={`/product/${data.id}/${data.product_name}`}
+          className="my-1 md:my-4 text-sm"
+        >
           View Details
         </a>
       </div>
       <div className="w-full flex  justify-between items-left px-2 ">
         <div className="flex">
           <BsFillCartCheckFill size={25} className="text-[#ffce1a] mr-2" />
-          <h4>234</h4>
+          <h4>{data.sold}</h4>
         </div>
-        <h3 className="text-lg font-bold">&#8358;34,000</h3>
+        <h3 className="text-lg font-bold">&#8358;{data.product_price}</h3>
       </div>
       <div className="w-full flex justify-between items-left mt-4 bg-gray-200 p-2">
-        <h4>com: 50%</h4>
-        <button className="bg-white rounded-full p-1 md:px-4 border-[.1rem] border-slate-900 text-slate-500 hover:text-blue-400 hover:border-yellow-500 flex justify-center items-center">
+        <h4>com: {data.product_commission}%</h4>
+        <button
+          onClick={(e) => copyLink()}
+          className="bg-white rounded-full p-1 md:px-4 border-[.1rem] border-slate-900 text-slate-500 hover:text-blue-400 hover:border-yellow-500 flex justify-center items-center"
+        >
           copy
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +59,11 @@ function Product() {
             <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
           </svg>
         </button>
+        <textarea
+          value={`https://commissionsfunnels.com/product/${data.id}/${data.product_name}`}
+          id="link"
+          className="hidden"
+        />
       </div>
     </div>
   );

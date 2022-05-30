@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function Index() {
   let navigate = useNavigate();
 
-  const api_url = "http://127.0.0.1:8000";
+  const api_url = import.meta.env.VITE_API_URL;
 
   const [email, setEmail] = useState("");
   const [FullName, setFullName] = useState("");
@@ -62,7 +62,7 @@ function Index() {
 
     if (error == "") {
       axios
-        .post(`${api_url}/api/createaccount`, {
+        .post(`${api_url}/createaccount`, {
           email,
           fullname: FullName,
           phone: phonenumber,
@@ -79,7 +79,7 @@ function Index() {
           }, 3000);
         })
         .catch((err) => {
-          console.log(err);
+          //console.log(err);
           notifyWarn(err.response.data.message);
         });
     }

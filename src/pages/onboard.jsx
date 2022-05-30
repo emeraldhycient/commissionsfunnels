@@ -188,7 +188,7 @@ function Onboard() {
               <p className="my-2 text-base">
                 if you are ready lets get it going
               </p>
-              <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-3 py-1 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+              <button className="mt-6 bg-slate-900 border-[.01rem] border-slate-900 text-white px-3 py-1 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
                 <Link to="/sign-up">Create account</Link>
               </button>
             </div>
