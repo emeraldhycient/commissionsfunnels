@@ -1,12 +1,57 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../components/merchants/layout";
 import Product from "../../components/merchants/marketplace/product";
 import Stat from "../../components/merchants/vendor/stat";
 import { RiStore3Line } from "react-icons/ri";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Marketplace() {
+  const api_url = import.meta.env.VITE_API_URL;
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const [products, setProducts] = useState([]);
+
+  const notifyWarn = (msg) =>
+    toast.warn(` ${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  useEffect(() => {
+    axios
+      .get(`${api_url}/products`)
+      .then((res) => {
+        setProducts(res.data.products);
+      })
+      .catch((err) => {
+        //console.log(err)
+
+        notifyWarn(err.response.data.message);
+        notifyWarn(err.response.message);
+      });
+  }, []);
+
   return (
     <Layout>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <h5 className="text-slate-900 text-sm my-4 hover:text-yellow-500">
         <Link to="/merchant/Marketplace" className="flex items-center ">
           <svg
@@ -27,7 +72,7 @@ function Marketplace() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-6 mt-4">
         <Stat
           name="Total  Products"
-          total={34246}
+          total={products.length}
           icon={<RiStore3Line size={25} className="text-[#ffce1a] mr-2" />}
         />
       </div>
@@ -50,18 +95,13 @@ function Marketplace() {
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-6 mt-4">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {products.length > 0 ? (
+          products.map((product) => <Product key={product.id} data={product} />)
+        ) : (
+          <div>
+            <h1>There are no approved products at the moment</h1>
+          </div>
+        )}
       </div>
     </Layout>
   );

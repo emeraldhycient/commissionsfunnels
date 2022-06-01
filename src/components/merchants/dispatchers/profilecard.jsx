@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 
 function Profilecard({ dispatcher }) {
-  const { name, location, delivery, price } = dispatcher;
+  const {
+    company_name,
+    company_location,
+    company_delivery_zone,
+    delivery_fee,
+    company_images,
+  } = dispatcher;
   const colors = [
     "border-[#f7d9d9]",
     "border-[#bbf7d0]",
@@ -26,7 +32,7 @@ function Profilecard({ dispatcher }) {
             className={`rounded-full h-28 w-28 border-2 ${color} bg-slate-900 shadow-md flex justify-center items-center`}
           >
             <img
-              src={`https://avatars.dicebear.com/api/human/${name}.svg`}
+              src={`https://avatars.dicebear.com/api/human/${company_name}.svg`}
               alt="avatar"
               className=" h-20 w-20 rounded-full"
             />
@@ -35,14 +41,16 @@ function Profilecard({ dispatcher }) {
         <div
           className={`ml-3 w-full flex flex-col justify-evenly h-32 items-left px-3 py-1 text-left border rounded-3xl shadow`}
         >
-          <h3 className="text-lg font-bold">{name}</h3>
+          <h3 className="text-lg font-bold">{company_name}</h3>
           <h4 className="text-sm font-medium text-gray-400">
-            Location : {location}
+            Location : {company_location}
           </h4>
           <h4 className="text-sm font-medium text-gray-400">
-            Delivery : {delivery}
+            Delivery : {company_delivery_zone}
           </h4>
-          <h3 className="text-base font-semibold">Avg/kg &#8358;{price}</h3>
+          <h3 className="text-base font-semibold">
+            Avg/kg &#8358;{delivery_fee}
+          </h3>
         </div>
       </div>
     </div>

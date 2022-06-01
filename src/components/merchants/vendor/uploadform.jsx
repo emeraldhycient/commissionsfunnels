@@ -62,7 +62,7 @@ function Uploadform() {
     formdata.append("product_commission", product_commission);
     formdata.append("product_delivery", product_delivery);
     formdata.append("sales_copy", convertedText);
-    formdata.append("product_seller", user.id);
+    formdata.append("product_seller", user.user_id);
 
     axios
       .post(`${api_url}/products/create`, formdata, {

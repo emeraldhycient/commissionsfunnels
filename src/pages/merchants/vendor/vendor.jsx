@@ -9,6 +9,8 @@ import { FcMoneyTransfer } from "react-icons/fc";
 import { RiStore3Line } from "react-icons/ri";
 import NonVendors from "../../../components/merchants/vendor/nonVendors";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Vendor() {
   const api_url = import.meta.env.VITE_API_URL;
@@ -16,11 +18,22 @@ function Vendor() {
   const user = JSON.parse(sessionStorage.getItem("user"));
   const [products, setProducts] = useState([]);
 
+  const notifyWarn = (msg) =>
+    toast.warn(` ${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
   useEffect(() => {
     axios
-      .get(`${api_url}/products/seller/${user.id}`, {
+      .get(`${api_url}/products/seller/${user.user_id}`, {
         headers: {
-          Authorization: `Bearer ${user.token}`,
+          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
         },
       })
       .then((res) => {
@@ -28,7 +41,9 @@ function Vendor() {
         setProducts(res.data.products);
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
+        notifyWarn(err.response.data.message);
+        notifyWarn(err.response.message);
       });
   }, []);
 
@@ -78,7 +93,7 @@ function Vendor() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
             <Stat
               name="products"
-              total={34246}
+              total={products.length}
               icon={<RiStore3Line size={25} className="text-[#ffce1a] mr-2" />}
             />
             <Stat
@@ -91,16 +106,6 @@ function Vendor() {
               total={367854}
               icon={
                 <FcMoneyTransfer size={25} className="text-[#ffce1a] mr-2" />
-              }
-            />
-            <Stat
-              name="products"
-              total={397864}
-              icon={
-                <BsFillCartCheckFill
-                  size={25}
-                  className="text-[#ffce1a] mr-2"
-                />
               }
             />
           </div>

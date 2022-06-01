@@ -1,45 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import Profilecard from "../../components/merchants/dispatchers/profilecard";
 import Layout from "../../components/merchants/layout";
 
 function DispatchersZone() {
+  const api_url = import.meta.env.VITE_API_URL;
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+
   const [dispatchers, setdispatchers] = useState([
-    {
-      id: 1,
-      name: "kelvin mane",
-      location: "Lagos Nigeria",
-      delivery: "Nationwide",
-      price: "600",
-    },
-    {
-      id: 2,
-      name: "emerald hycient",
-      location: "Lagos Nigeria",
-      delivery: "state",
-      price: "500",
-    },
-    {
-      id: 3,
-      name: "John Doe",
-      location: "Lagos Nigeria",
-      delivery: "Nationwide",
-      price: "700",
-    },
-    {
-      id: 4,
-      name: "Jane Doe",
-      location: "Lagos Nigeria",
-      delivery: "state",
-      price: "550",
-    },
-    {
-      id: 5,
-      name: "edan Doe",
-      location: "Lagos Nigeria",
-      delivery: "Nationwide",
-      price: "500",
-    },
     {
       id: 6,
       name: "chuks pamer",
@@ -48,6 +20,30 @@ function DispatchersZone() {
       price: "400",
     },
   ]);
+
+  const notifyWarn = (msg) =>
+    toast.warn(` ${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  useEffect(() => {
+    axios
+      .get(`${api_url}/dispatchers`)
+      .then((res) => {
+        setdispatchers(res.data.dispatchers);
+      })
+      .catch((err) => {
+        //console.log(err)
+        notifyWarn(err.response.data.message);
+        notifyWarn(err.response.message);
+      });
+  }, []);
 
   return (
     <Layout>
