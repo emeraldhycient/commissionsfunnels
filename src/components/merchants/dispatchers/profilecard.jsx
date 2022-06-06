@@ -24,7 +24,7 @@ function Profilecard({ dispatcher }) {
 
   return (
     <div
-      className={`bg-white bg-gray-200 shadow rounded-3xl h-32 border ${color}`}
+      className={`bg-white bg-gray-200 shadow rounded-3xl h-fit border ${color}`}
     >
       <div className="flex justify-between items-center w-full">
         <Link to="/">
@@ -39,9 +39,9 @@ function Profilecard({ dispatcher }) {
           </div>
         </Link>
         <div
-          className={`ml-3 w-full flex flex-col justify-evenly h-32 items-left px-3 py-1 text-left border rounded-3xl shadow`}
+          className={`ml-3 w-full flex flex-col justify-evenly h-full items-left px-3 py-1 text-left border rounded-3xl shadow`}
         >
-          <h3 className="text-lg font-bold">{company_name}</h3>
+          <h3 className="text-lg font-bold ">{company_name}</h3>
           <h4 className="text-sm font-medium text-gray-400">
             Location : {company_location}
           </h4>

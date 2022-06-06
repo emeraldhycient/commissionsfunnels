@@ -84,6 +84,7 @@ function Capturedetails() {
     formData.append("delivery_fee", delivery_fee);
     formData.append("company_location", company_location);
     formData.append("company_delivery_zone", company_delivery_zone);
+    formData.append("user_id", user.user_id);
 
     axios
       .post(`${api_url}/dispatchers/register`, formData, {
@@ -95,7 +96,7 @@ function Capturedetails() {
       .then((res) => {
         notifySuccess(res.data.message);
         setTimeout(() => {
-          window.location.href = "/merchant/onboarding/vendor";
+          window.location.href = "/merchant/dashboard";
         }, 2000);
       })
       .catch((err) => {

@@ -1,21 +1,23 @@
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 
 function Bank() {
+  const user = JSON.parse(sessionStorage.getItem("user"));
+
   const config = {
-    public_key: "FLWPUBK-**************************-X",
-    tx_ref: Date.now(),
-    amount: 100,
+    public_key: "FLWPUBK_TEST-ed08fcc09d22e13c173bbebca18da272-X",
+    tx_ref: `commissionsfunnels-${Date.now()}`,
+    amount: 20000,
     currency: "NGN",
     payment_options: "card,mobilemoney,ussd",
     customer: {
-      email: "user@gmail.com",
-      phonenumber: "07064586146",
-      name: "joel ugwumadu",
+      email: user.email,
+      phonenumber: user.phone,
+      name: user.fullname,
     },
     customizations: {
-      title: "my Payment Title",
-      description: "Payment for items in cart",
-      logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+      title: "registration payment for commissionsfunnels vendor",
+      description: "registration payment for commissionsfunnels vendor",
+      logo: "https://i.postimg.cc/76rWrcZV/logo.png",
     },
   };
 
@@ -34,7 +36,9 @@ function Bank() {
               console.log(response);
               closePaymentModal(); // this will close the modal programmatically
             },
-            onClose: () => {},
+            onClose: () => {
+              //make api call to backend to verify payment and also make a user a vendor
+            },
           });
         }}
       >

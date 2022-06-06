@@ -8,6 +8,7 @@ function Sidebar() {
   let navigate = useNavigate();
 
   const api_url = import.meta.env.VITE_API_URL;
+  const user = JSON.parse(sessionStorage.getItem("user"));
 
   const notifySuccess = (msg) =>
     toast.success(`🦄  ${msg}`, {
@@ -192,7 +193,7 @@ function Sidebar() {
               className="h-full w-full rounded-full"
             />
           </div>
-          <h2 className="mx-2 text-sm">Igweze Hycient</h2>
+          <h2 className="mx-2 text-sm">{user.fullname}</h2>
         </Link>
         <button
           onClick={(e) => logout()}

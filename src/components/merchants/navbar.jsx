@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const user = JSON.parse(sessionStorage.getItem("user"));
+
   return (
     <div className="sticky top-0 left-0 right-0 h-[3rem] bg-gray-50 border-b-[.1rem] border-gray-200 flex items-center px-2 md:px-6">
       <div className="flex-1 flex justify-between items-center">
@@ -65,7 +67,7 @@ function Navbar() {
               className="h-full w-full rounded-full"
             />
           </div>
-          <h2 className="mx-2 text-sm">Igweze Hycient</h2>
+          <h2 className="mx-2 text-sm">{user.fullname}</h2>
         </div>
       </div>
     </div>
