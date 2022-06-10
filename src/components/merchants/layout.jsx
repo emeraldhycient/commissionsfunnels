@@ -1,8 +1,18 @@
-import React from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 
 function Layout({ children }) {
+  const navigate = useNavigate();
+  const token = sessionStorage.getItem("token");
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/login", { replace: true });
+    }
+  }, []);
+
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-8 h-screen">
