@@ -1,4 +1,5 @@
 import sales from "../../assets/images/sales.png";
+import emptycart from "../../assets/images/emptycart.svg";
 import { Link } from "react-router-dom";
 
 function SalesForce() {
@@ -8,7 +9,7 @@ function SalesForce() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="md:mt-20 mt-12 mb-8">
             <center>
-              <img src={sales} loading="lazy" className="w-[80%]" alt="" />
+              <img src={emptycart} loading="lazy" className="w-[80%]" alt="" />
             </center>
           </div>
           <div className=" flex flex-col justify-center items-center  text-left">
@@ -22,7 +23,7 @@ function SalesForce() {
               sapiente omnis earum praesentium doloribus ab ex. Reprehenderit ad
             </p>
             <div className="flex justify-between mt-8 items-center w-full pr-4">
-              <button className="bg-slate-900 w-full border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+              <button className="bg-slate-900 rounded-md w-full border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
                 <Link
                   to="/onboard/"
                   className="hover:text-slate-900 text-white"

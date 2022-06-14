@@ -1,4 +1,4 @@
-import delivery from "../../assets/images/delivery.gif";
+import delivery from "../../assets/images/deliver.gif";
 import { Link } from "react-router-dom";
 
 function Delivery() {
@@ -18,7 +18,7 @@ function Delivery() {
               sapiente omnis earum praesentium doloribus ab ex. Reprehenderit ad
             </p>
             <div className="flex justify-between mt-8 items-center w-full pr-4">
-              <button className="w-full bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-[#ffce1a] hover:border[#ffce1a]">
+              <button className="w-full rounded-md bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-[#ffce1a] hover:border[#ffce1a]">
                 <Link to="/onboard/" className="text-white">
                   <Link
                     to="/onboard/"

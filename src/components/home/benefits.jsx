@@ -1,5 +1,7 @@
 import friends from "../../assets/images/friends.png";
 import doit from "../../assets/images/doit.png";
+import shop from "../../assets/images/shop.svg";
+import donefor from "../../assets/images/donefor.svg";
 import { Link } from "react-router-dom";
 
 function Benefits() {
@@ -34,7 +36,7 @@ function Benefits() {
                   excepturi maxime assumenda quaerat, eaque ut!
                 </p>
                 <center className="w-full">
-                  <button className="w-full bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+                  <button className="w-full rounded-md bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
                     <Link
                       to="/onboard/"
                       className="hover:text-slate-900 text-white"
@@ -51,7 +53,7 @@ function Benefits() {
               </div>
               <center>
                 <img
-                  src={friends}
+                  src={shop}
                   loading="lazy"
                   className="w-[80%] mb-6"
                   alt=""
@@ -63,7 +65,7 @@ function Benefits() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <center className="order-last md:order-first">
                 <img
-                  src={doit}
+                  src={donefor}
                   loading="lazy"
                   className="w-[80%] mb-6"
                   alt=""
@@ -87,7 +89,7 @@ function Benefits() {
                   excepturi maxime assumenda quaerat, eaque ut!
                 </p>
                 <center className="w-full">
-                  <button className="w-full bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+                  <button className="w-full rounded-md bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
                     <Link
                       to="/onboard/"
                       className="hover:text-slate-900 text-white"

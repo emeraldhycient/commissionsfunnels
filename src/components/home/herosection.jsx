@@ -17,7 +17,7 @@ function Herosection() {
             sapiente omnis earum praesentium doloribus ab ex. Reprehenderit ad
           </p>
           <div className="flex justify-between mt-8 items-center w-full pr-4">
-            <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-3 py-1  hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+            <button className="rounded-md bg-slate-900 border-[.01rem] border-slate-900 text-white px-3 py-1  hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
               <Link to="/onboard/" className="text-white hover:text-slate-900">
                 <h6 className="text-md font-semibold mb-1">
                   Get Started Today{" "}
