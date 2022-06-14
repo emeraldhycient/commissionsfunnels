@@ -36,6 +36,7 @@ function App() {
         <Route path="/merchant/dispatcherszone" element={<DispatchersZone />} />
         <Route path="/onboarding/dispatcher" element={<OnBoardDispatcher />} />
         <Route path="/onboarding/vendor" element={<OnBoardVendor />} />
+        <Route path="/product/:affliate/:id/:name" element={<Salescopy />} />
         <Route path="/product/:id/:name" element={<Salescopy />} />
       </Routes>
     </BrowserRouter>

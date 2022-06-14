@@ -5,7 +5,7 @@ function Product({ data }) {
   //remeber add the affliate link to the copy
   const copyLink = () => {
     //copy to clipboard
-    const link = `https://commissionsfunnels.com/product/${data.id}/${data.product_name}`;
+    const link = `https://commissionsfunnels.com/product/${user.user_id}/${data.id}/${data.product_name}`;
     if (navigator.clipboard.writeText(link)) {
       alert(`Link Copied to Clipboard
        ${link}`);
@@ -21,6 +21,8 @@ function Product({ data }) {
     `);
   };
 
+  const user = JSON.parse(sessionStorage.getItem("user"));
+
   return (
     <div className=" mb-4 border-b-[.1rem] border-[#ffce1a] shadow-lg pt-2">
       <div className="bg-gray-50 h-40 w-full flex justify-center items-center">
@@ -30,7 +32,7 @@ function Product({ data }) {
         <h4 className="text-base font-bold">{data.product_name}</h4>
         <p className="text-sm text-gray-400">{data.product_description}</p>
         <a
-          href={`/product/${data.id}/${data.product_name}`}
+          href={`/product/${user.user_id}/${data.id}/${data.product_name}`}
           className="my-1 md:my-4 text-sm"
         >
           View Details
@@ -61,7 +63,7 @@ function Product({ data }) {
           </svg>
         </button>
         <textarea
-          value={`https://commissionsfunnels.com/product/${data.id}/${data.product_name}`}
+          value={`https://commissionsfunnels.com/product/${user.user_id}/${data.id}/${data.product_name}`}
           id="link"
           className="hidden"
         />

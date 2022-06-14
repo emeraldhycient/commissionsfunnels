@@ -17,7 +17,7 @@ function Stat({ icon, name, total }) {
 
   return (
     <div
-      className={`mb-4  border-t-[.17rem] ${color} rounded-l-lg shadow-lg  h-16 shadow-lg flex`}
+      className={`mb-4  border-[.17rem] border-gray-100 rounded-lg  h-16 shadow-lg flex bg-white`}
     >
       <div className="w-[30%] bg-slate-900 h-16 rounded-r-lg rounded-l-lg flex justify-center items-center">
         {icon}

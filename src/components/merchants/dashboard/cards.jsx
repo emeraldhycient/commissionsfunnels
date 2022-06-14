@@ -17,10 +17,8 @@ function Cards({ title, count, icon }) {
 
   return (
     <div className="h-fit bg-white   rounded-lg hover:shadow-lg pb-4">
-      <div
-        className={`h-20 bg-slate-900 border-2 ${color}  flex justify-center items-center`}
-      >
-        <div className="rounded-full h-12 w-12 bg-yellow-500  flex justify-center items-center text-white">
+      <div className={`h-20 bg-slate-900   flex justify-center items-center`}>
+        <div className="rounded-full h-12 w-12 bg-white  flex justify-center items-center text-white">
           {icon}
         </div>
       </div>

@@ -1,6 +1,40 @@
-import { BsFillCartCheckFill } from "react-icons/bs";
-import shoe from "../../assets/images/shoe.jpeg";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Product from "./product";
+
 function StoreOverview() {
+  const api_url = import.meta.env.VITE_API_URL;
+
+  const [products, setProducts] = useState([]);
+
+  const notifyWarn = (msg) =>
+    toast.warn(` ${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  useEffect(() => {
+    axios
+      .get(`${api_url}/products`)
+      .then((res) => {
+        const sliceProducts = res.data.slice(0, 6);
+        setProducts(sliceProducts);
+      })
+      .catch((err) => {
+        //console.log(err)
+
+        notifyWarn(err.response.data.message);
+        notifyWarn(err.response.message);
+      });
+  }, []);
+
   return (
     <section className="w-full h-fit pb-8">
       <div className="md:w-10/12 md:mx-auto mx-2  mt-10">
@@ -8,101 +42,17 @@ function StoreOverview() {
           some Products listed on our platform
         </h2>
       </div>
-      <div className="md:w-5/12 md:mx-auto mx-4  mt-8">
-        <div className="grid grid-cols-4 gap-4 mb-4 border-b-[.1rem] border-[#ffce1a]">
-          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} loading="lazy" alt="" />
-          </div>
-          <div className="w-full flex flex-col justify-between items-left col-span-2">
-            <h4 className="text-base font-bold">
-              italian soled black rubber hand crafted shoe
-            </h4>
-            <p className="text-sm text-gray-400">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. .
-            </p>
-            <a href="" className="my-1 md:my-4 text-sm">
-              View Details
-            </a>
-          </div>
-          <div className="w-full flex flex-col justify-between items-left">
-            <div className="flex">
-              <BsFillCartCheckFill size={25} className="text-[#ffce1a] mr-2" />
-              <h4>234</h4>
+      <div className="md:w-10/12 md:mx-auto mx-4  mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-6 mt-4">
+          {products.length > 0 ? (
+            products.map((product) => (
+              <Product key={product.id} data={product} />
+            ))
+          ) : (
+            <div>
+              <h1>There are no approved products at the moment</h1>
             </div>
-            <h3 className="text-lg font-bold">&#8358;34,000</h3>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-4 mb-4 border-b-[.1rem] border-[#ffce1a]">
-          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} loading="lazy" alt="" />
-          </div>
-          <div className="w-full flex flex-col justify-between items-left col-span-2">
-            <h4 className="text-base font-bold">
-              italian soled black rubber hand crafted shoe
-            </h4>
-            <p className="text-sm text-gray-400">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. .
-            </p>
-            <a href="" className="my-1 md:my-4 text-sm">
-              View Details
-            </a>
-          </div>
-          <div className="w-full flex flex-col justify-between items-left">
-            <div className="flex">
-              <BsFillCartCheckFill size={25} className="text-[#ffce1a] mr-2" />
-              <h4>234</h4>
-            </div>
-            <h3 className="text-lg font-bold">&#8358;34,000</h3>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-4 mb-4 border-b-[.1rem] border-[#ffce1a]">
-          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} loading="lazy" alt="" />
-          </div>
-          <div className="w-full flex flex-col justify-between items-left col-span-2">
-            <h4 className="text-base font-bold">
-              italian soled black rubber hand crafted shoe
-            </h4>
-            <p className="text-sm text-gray-400">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. .
-            </p>
-            <a href="" className="my-1 md:my-4 text-sm">
-              View Details
-            </a>
-          </div>
-          <div className="w-full flex flex-col justify-between items-left">
-            <div className="flex">
-              <BsFillCartCheckFill size={25} className="text-[#ffce1a] mr-2" />
-              <h4>234</h4>
-            </div>
-            <h3 className="text-lg font-bold">&#8358;34,000</h3>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-4 mb-4 border-b-[.1rem] border-[#ffce1a]">
-          <div className="bg-gray-200 h-fit  w-full flex justify-center items-center">
-            <img src={shoe} loading="lazy" alt="" />
-          </div>
-          <div className="w-full flex flex-col justify-between items-left col-span-2">
-            <h4 className="text-base font-bold">
-              italian soled black rubber hand crafted shoe
-            </h4>
-            <p className="text-sm text-gray-400">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. .
-            </p>
-            <a href="" className="my-1 md:my-4 text-sm">
-              View Details
-            </a>
-          </div>
-          <div className="w-full flex flex-col justify-between items-left">
-            <div className="flex">
-              <BsFillCartCheckFill size={25} className="text-[#ffce1a] mr-2" />
-              <h4>234</h4>
-            </div>
-            <h3 className="text-lg font-bold">&#8358;34,000</h3>
-          </div>
+          )}
         </div>
       </div>
     </section>

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function Benefits() {
   return (
-    <section className="w-full bg-gray-100 h-fit pt-4 pb-8">
-      <div className="mx-4 md:w-10/12 md:mx-auto mt-8">
+    <section className="w-full h-fit pt-4 pb-8">
+      <div className="mx-4 md:w-10/12 md:mx-auto mt-8 ">
         <div className="mb-8">
           <h1 className="text-2xl font-extrabold  capitalize">
             Benefits For everyOne !
@@ -33,10 +33,18 @@ function Benefits() {
                   Possimus quisquam laudantium optio quam dolore veritatis
                   excepturi maxime assumenda quaerat, eaque ut!
                 </p>
-                <center className="">
-                  <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
-                    <Link to="/onboard/" className="text-white">
-                      Join as an Affliate
+                <center className="w-full">
+                  <button className="w-full bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+                    <Link
+                      to="/onboard/"
+                      className="hover:text-slate-900 text-white"
+                    >
+                      <h6 className="text-md font-semibold mb-1">
+                        Join as an Affiliate
+                      </h6>
+                      <p className="text-xs">
+                        Get paid for recommending any product{" "}
+                      </p>{" "}
                     </Link>
                   </button>
                 </center>
@@ -78,9 +86,19 @@ function Benefits() {
                   Possimus quisquam laudantium optio quam dolore veritatis
                   excepturi maxime assumenda quaerat, eaque ut!
                 </p>
-                <center className="">
-                  <button className="bg-white border-[.01rem] border-slate-900 text-[#ffce1a] px-4 py-2 text-lg hover:bg-slate-900 hover:text-white hover:border[#ffce1a] capitalize">
-                    Book Our Service
+                <center className="w-full">
+                  <button className="w-full bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 hover:bg-white hover:text-slate-900 hover:border[#ffce1a]">
+                    <Link
+                      to="/onboard/"
+                      className="hover:text-slate-900 text-white"
+                    >
+                      <h6 className="text-md font-semibold mb-1">
+                        Book Our Service
+                      </h6>
+                      <p className="text-xs">
+                        Get sales page written by experts
+                      </p>
+                    </Link>
                   </button>
                 </center>
               </div>

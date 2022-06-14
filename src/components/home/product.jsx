@@ -1,10 +1,11 @@
 import { BsFillCartCheckFill } from "react-icons/bs";
-import shoe from "../../../assets/images/shoe.jpeg";
+import shoe from "../../assets/images/shoe.jpeg";
 
 function Product({ data }) {
+  //remeber add the affliate link to the copy
   const copyLink = () => {
     //copy to clipboard
-    const link = `https://commissionsfunnels.com/product/${user.user_id}/${data.id}/${data.product_name}`;
+    const link = `https://commissionsfunnels.com/product/${data.id}/${data.product_name}`;
     if (navigator.clipboard.writeText(link)) {
       alert(`Link Copied to Clipboard
        ${link}`);
@@ -29,10 +30,9 @@ function Product({ data }) {
       </div>
       <div className="w-full flex flex-col justify-between items-left px-2 ">
         <h4 className="text-base font-bold">{data.product_name}</h4>
-        <p className="text-sm text-gray-400">{data.product_description}</p>
         <a
           href={`/product/${data.id}/${data.product_name}`}
-          className="my-1 md:my-4 text-sm"
+          className="my-1 md:my-2 text-sm"
         >
           View Details
         </a>

@@ -94,7 +94,7 @@ function Marketplace() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-6 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-6 mt-4">
         {products.length > 0 ? (
           products.map((product) => <Product key={product.id} data={product} />)
         ) : (

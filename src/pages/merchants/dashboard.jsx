@@ -28,14 +28,14 @@ function Dashboard() {
           <h6>Dashboard</h6>
         </Link>
       </h5>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 mb-8 bg-gray-100 py-8 px-2 rounded-lg">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-2 mb-8 bg-gray-100 py-2 px-2 rounded-lg">
         <Cards
           title="affliate Sales"
           count={2345}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-red-500"
+              className="h-8 w-8 text-gray-500"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -46,39 +46,39 @@ function Dashboard() {
         <Cards
           title="affliate Commissions earned"
           count={2345}
-          icon={<GrMoney className="bg-green-500 rounded-lg" size={25} />}
+          icon={<GrMoney className="text-gray-500 rounded-lg" size={25} />}
         />
         <Cards
           title="Total aff commiss Paid Out"
           count={2345}
-          icon={<FaMoneyCheck className="text-indigo-400" size={25} />}
+          icon={<FaMoneyCheck className="text-gray-500" size={25} />}
         />
         <Cards
           title="Pending Payout aff commiss"
           count={2345}
-          icon={<GiTakeMyMoney className="text-purple-400" size={25} />}
+          icon={<GiTakeMyMoney className="text-gray-500" size={25} />}
         />
         <Cards
           title="total products"
           count={2345}
-          icon={<FcShop size={25} className="text-white" />}
+          icon={<FcShop size={25} className="text-gray-500" />}
         />
         <Cards
           title="sold products"
           count={2345}
-          icon={<FcMoneyTransfer className="text-white" size={25} />}
+          icon={<FcMoneyTransfer className="text-gray-500" size={25} />}
         />
         <Cards
           title=" products revenue"
           count={2345}
-          icon={<MdOutlineSavings className="text-indigo-500" size={25} />}
+          icon={<MdOutlineSavings className="text-gray-500" size={25} />}
         />
         <Cards
           title="funnels visit"
           count={2345}
           icon={
             <MdOutlineTransferWithinAStation
-              className="text-purple-400"
+              className="text-gray-500"
               size={25}
             />
           }

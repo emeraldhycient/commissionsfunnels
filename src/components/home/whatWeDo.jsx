@@ -45,14 +45,6 @@ function WhatWeDo() {
             <h3 className="text-lg font-bold">Community members</h3>
           </div>
         </div>
-
-        <center className="mt-16">
-          <button className="bg-slate-900 border-[.01rem] border-slate-900 text-white px-4 py-2 text-lg hover:bg-[#ffce1a] hover:text-white hover:border[#ffce1a]">
-            <Link to="/onboard/" className="text-white">
-              Get Started
-            </Link>
-          </button>
-        </center>
       </div>
     </section>
   );

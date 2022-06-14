@@ -109,7 +109,7 @@ function Vendor() {
               }
             />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-6 mt-4">
             {/*remember add product status and also an edit button at the top */}
             {products.length > 0 ? (
               products.map((product) => (

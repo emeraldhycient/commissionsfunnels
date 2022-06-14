@@ -21,7 +21,9 @@ function Layout({ children }) {
         </div>
         <div className="col-span-7 overflow-auto	">
           <Navbar />
-          <div className="mx-2 md:px-6">{children}</div>
+          <div className="px-4  md:px-6 bg-gray-100 h-screen overflow-y-auto">
+            {children}
+          </div>
         </div>
       </div>
     </section>
