@@ -90,7 +90,7 @@ function Vendor() {
 
       {user.is_vendor ? (
         <>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4 border bg-white">
             <Stat
               name="products"
               total={products.length}

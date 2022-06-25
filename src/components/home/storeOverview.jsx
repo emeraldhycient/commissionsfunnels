@@ -24,11 +24,12 @@ function StoreOverview() {
     axios
       .get(`${api_url}/products`)
       .then((res) => {
-        const sliceProducts = res.data.slice(0, 6);
+        const sliceProducts = res.data.products.slice(0, 6);
         setProducts(sliceProducts);
+        console.log(res);
       })
       .catch((err) => {
-        //console.log(err)
+        console.log(err);
 
         notifyWarn(err.response.data.message);
         notifyWarn(err.response.message);
